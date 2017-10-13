@@ -1,5 +1,11 @@
 <table border="1">
-    <thead></thead>
+    <thead>
+    <tr>
+        {% for name in th_obj %}
+            <th>{{ name }}</th>
+        {% endfor %}
+    </tr>
+    </thead>
     <tbody>
     {% for item in tb_obj %}
         <tr>
