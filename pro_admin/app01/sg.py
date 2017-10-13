@@ -5,14 +5,13 @@ from django.urls import reverse
 
 
 class SixGodUserInfo(v1.BaseSixGodAdmin):
-
     # table 操作（编辑）
     def edit_func(self, obj=None, is_header=False):
         if is_header:
             return '操作'
         else:
             reverse_name = '{0}:{1}_{2}_change'.format(self.site.namespace, self.model_class._meta.app_label,
-                                                           self.model_class._meta.model_name)
+                                                       self.model_class._meta.model_name)
             url = reverse(reverse_name, args=(obj.pk,))
             return mark_safe('<a href="{0}">编辑</a>'.format(url))
 
