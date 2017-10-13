@@ -1,7 +1,9 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import HttpResponse, render
 
 
 class BaseSixGodAdmin(object):
+    list_display = '__all__'  # 显示全部字段
+
     def __init__(self, model_class, site):
         self.model_class = model_class
         self.site = site
@@ -21,7 +23,16 @@ class BaseSixGodAdmin(object):
         return urlpatterns
 
     def changelist_view(self, request):
-        return HttpResponse('changelist_view')
+        self.request = request
+        result_list = self.model_class.objects.all()
+
+        context = {
+            'result_list': result_list,
+            'list_display': self.list_display,
+            # 'sga_obj': self,
+        }
+
+        return render(self.request, 'sg/changelist_view.html', context)
 
     def add_view(self, request):
         return HttpResponse('add')
@@ -54,7 +65,7 @@ class SixGodSite(object):
             app_label = model_cls._meta.app_label
             model_name = model_cls._meta.model_name
 
-            print(app_label, model_name)
+            # print(app_label, model_name)
 
             ret.append(url(r'^%s/%s/' % (app_label, model_name), include(admin_cls_obj.urls)))
 

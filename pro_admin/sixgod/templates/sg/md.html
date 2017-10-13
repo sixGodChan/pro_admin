@@ -1,0 +1,12 @@
+<table border="1">
+    <thead></thead>
+    <tbody>
+    {% for item in tb_obj %}
+        <tr>
+            {% for val in val %}
+                <td>{{ val }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
