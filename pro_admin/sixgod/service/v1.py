@@ -1,18 +1,23 @@
-from django.shortcuts import HttpResponse, render
+from django.shortcuts import HttpResponse, render, redirect
+from django.urls import reverse
 
 
 class BaseSixGodAdmin(object):
     list_display = '__all__'  # 显示全部字段
+    model_form = None
 
     def __init__(self, model_class, site):
         self.model_class = model_class
         self.site = site
         self.request = None
 
+        self.app_label = self.model_class._meta.app_label
+        self.model_name = self.model_class._meta.model_name
+
     @property
     def urls(self):
         from django.conf.urls import url
-        info = self.model_class._meta.app_label, self.model_class._meta.model_name
+        info = self.app_label, self.model_name
         urlpatterns = [
             url(r'^$', self.changelist_view, name='%s_%s_changelist' % info),
             url(r'^add/$', self.add_view, name='%s_%s_add' % info),
@@ -22,7 +27,33 @@ class BaseSixGodAdmin(object):
 
         return urlpatterns
 
+    def get_ModelForm(self):
+        if self.model_form:
+            return self.model_form
+        else:
+            from django.forms import ModelForm
+            class MyModelForm(ModelForm):
+                class Meta:
+                    model = self.model_class
+                    fields = '__all__'
+
+            # type 创建类
+            # _m = type('Meta', (object,), {'model': self.model_class, 'fields': '__all__'})
+            # MyModelForm = type('MyModelForm', (ModelForm), {'Meta': _m})
+
+            return MyModelForm
+
     def changelist_view(self, request):
+        # 列表页：添加按钮
+        from django.http.request import QueryDict
+        param_dict = QueryDict(mutable=True)
+        if request.GET:
+            param_dict['_changelist_filter'] = request.GET.urlencode()
+
+        base_add_url = reverse('{0}:{1}_{2}_add'.format(self.site.namespace, self.app_label, self.model_name))
+        add_url = '{0}?{1}'.format(base_add_url, param_dict.urlencode())
+
+        # 列表页：表格
         self.request = request
         result_list = self.model_class.objects.all()
 
@@ -30,19 +61,64 @@ class BaseSixGodAdmin(object):
             'result_list': result_list,
             'list_display': self.list_display,
             'sga_obj': self,
+            'add_url': add_url,
         }
 
         return render(self.request, 'sg/changelist_view.html', context)
 
     def add_view(self, request):
-        return HttpResponse('add')
+        if request.method == 'GET':
+            form = self.get_ModelForm()()
+            context = {
+                'form': form
+            }
+            return render(request, 'sg/add_view.html', context)
+        else:
+            form = self.get_ModelForm()(data=request.POST, files=request.FILES)
+            if form.is_valid:
+                form.save()
+                base_add_url = reverse(
+                    '{0}:{1}_{2}_changelist'.format(self.site.namespace, self.app_label, self.model_name))
+                add_url = '{0}?{1}'.format(base_add_url, request.GET.get('_changelist_filter'))
+
+                return redirect(add_url)
+            context = {
+                'form': form
+            }
+            return render(request, 'sg/add_view.html', context)
 
     def delete_view(self, request, pk):
-        return HttpResponse('delete')
+        if request.method == 'GET':
+            if pk:
+                obj = self.model_class.objects.filter(pk=pk).delete()
+                if obj:
+                    base_add_url = reverse(
+                        '{0}:{1}_{2}_changelist'.format(self.site.namespace, self.app_label, self.model_name))
+                    edit_url = '{0}?{1}'.format(base_add_url, request.GET.get('_changelist_filter'))
+
+                    return redirect(edit_url)
 
     def change_view(self, request, pk):
-        return HttpResponse('change')
+        obj = self.model_class.objects.filter(pk=pk).first()
+        if request.method == 'GET':
+            form = self.get_ModelForm()(instance=obj)
+            context = {
+                'form': form
+            }
+            return render(request, 'sg/change_view.html', context)
+        else:
+            form = self.get_ModelForm()(instance=obj, data=request.POST, files=request.FILES)
+            if form.is_valid:
+                form.save()
+                base_add_url = reverse(
+                    '{0}:{1}_{2}_changelist'.format(self.site.namespace, self.app_label, self.model_name))
+                edit_url = '{0}?{1}'.format(base_add_url, request.GET.get('_changelist_filter'))
 
+                return redirect(edit_url)
+            context = {
+                'form': form
+            }
+            return render(request, 'sg/change_view.html', context)
 
 class SixGodSite(object):
     def __init__(self):
