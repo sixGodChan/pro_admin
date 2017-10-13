@@ -29,7 +29,7 @@ class BaseSixGodAdmin(object):
         context = {
             'result_list': result_list,
             'list_display': self.list_display,
-            # 'sga_obj': self,
+            'sga_obj': self,
         }
 
         return render(self.request, 'sg/changelist_view.html', context)
