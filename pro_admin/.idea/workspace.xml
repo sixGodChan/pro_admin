@@ -51,23 +51,31 @@
       <file leaf-file-name="changelist_view.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sixgod/templates/sg/changelist_view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+            <state relative-caret-position="238">
+              <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sg_list.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sixgod/templatetags/sg_list.py">
+      <file leaf-file-name="sg_form.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sixgod/templatetags/sg_form.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="35" column="78" lean-forward="false" selection-start-line="35" selection-start-column="78" selection-end-line="35" selection-end-column="78" />
+            <state relative-caret-position="265">
+              <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <element signature="e#147#172#0" expanded="false" />
-                <element signature="e#906#933#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="md_add_edit.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sixgod/templates/sg/md_add_edit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -76,17 +84,7 @@
         <entry file="file://$PROJECT_DIR$/app01/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="169">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app01/tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -95,22 +93,21 @@
       <file leaf-file-name="md.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sixgod/templates/sg/md.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-              <folding>
-                <marker date="1507871678000" expanded="true" signature="17:348" ph="..." />
-              </folding>
+            <state relative-caret-position="289">
+              <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sg.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sg.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app01/sg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="46" column="86" lean-forward="true" selection-start-line="46" selection-start-column="86" selection-end-line="46" selection-end-column="86" />
+            <state relative-caret-position="329">
+              <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
+                <element signature="e#261#1630#0" expanded="false" />
                 <element signature="e#1714#1911#0" expanded="false" />
                 <element signature="e#1980#2088#0" expanded="false" />
               </folding>
@@ -121,9 +118,11 @@
       <file leaf-file-name="change_view.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sixgod/templates/sg/change_view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-              <folding />
+            <state relative-caret-position="255">
+              <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+              <folding>
+                <marker date="1507898582000" expanded="true" signature="31:273" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -131,15 +130,18 @@
       <file leaf-file-name="v1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sixgod/service/v1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+            <state relative-caret-position="499">
+              <caret line="123" column="16" lean-forward="false" selection-start-line="123" selection-start-column="6" selection-end-line="123" selection-end-column="16" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
                 <element signature="e#238#440#0" expanded="false" />
                 <element signature="e#484#935#0" expanded="false" />
                 <element signature="e#974#1467#0" expanded="false" />
                 <element signature="e#1517#2256#0" expanded="false" />
-                <element signature="e#2299#3067#0" expanded="false" />
+                <element signature="e#3137#3580#0" expanded="false" />
+                <element signature="e#3630#4479#0" expanded="false" />
+                <element signature="e#4728#4801#0" expanded="false" />
+                <element signature="e#4835#5342#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -148,8 +150,8 @@
       <file leaf-file-name="add_view.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sixgod/templates/sg/add_view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+            <state relative-caret-position="289">
+              <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -168,6 +170,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>add_url</find>
+      <find>model_class</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -177,12 +180,17 @@
         <option value="$PROJECT_DIR$/pro_admin/urls.py" />
         <option value="$PROJECT_DIR$/sixgod/apps.py" />
         <option value="$PROJECT_DIR$/sixgod/templates/sg/md.html" />
-        <option value="$PROJECT_DIR$/sixgod/templatetags/sg_list.py" />
         <option value="$PROJECT_DIR$/sixgod/templates/sg/changelist_view.html" />
-        <option value="$PROJECT_DIR$/sixgod/templates/sg/add_view.html" />
         <option value="$PROJECT_DIR$/sixgod/templates/sg/edit_view.html" />
         <option value="$PROJECT_DIR$/app01/models.py" />
+        <option value="$PROJECT_DIR$/sixgod/templates/sg/change_view.html" />
+        <option value="$PROJECT_DIR$/sixgod/templatetags/sg_add.py" />
         <option value="$PROJECT_DIR$/sixgod/service/v1.py" />
+        <option value="$PROJECT_DIR$/sixgod/templatetags/sg_list.py" />
+        <option value="$PROJECT_DIR$/sixgod/templates/sg/add_view.html" />
+        <option value="$PROJECT_DIR$/sixgod/templates/sg/md_add.html" />
+        <option value="$PROJECT_DIR$/sixgod/templatetags/sg_form.py" />
+        <option value="$PROJECT_DIR$/sixgod/templates/sg/md_add_edit.html" />
         <option value="$PROJECT_DIR$/app01/sg.py" />
       </list>
     </option>
@@ -333,6 +341,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sixgod/templatetags" />
       <recent name="$PROJECT_DIR$/sixgod/templates/sg" />
     </key>
   </component>
@@ -599,11 +608,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3091703" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37806875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.198036" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2487725" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922825" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -645,7 +654,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -761,16 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sixgod/templates/sg/md.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding>
-            <marker date="1507871678000" expanded="true" signature="17:348" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/701a1a8a/b94e21f4-252e-4347-96cd-a5fef6328ecb/main.app01_role">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -818,74 +817,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sixgod/templates/sg/changelist_view.html">
+    <entry file="file://$PROJECT_DIR$/app01/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        <state relative-caret-position="169">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sixgod/templatetags/sg_add.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/forms/boundfield.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="80" column="14" lean-forward="false" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sixgod/templates/sg/md.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sixgod/templates/sg/change_view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sixgod/templates/sg/add_view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app01/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="255">
+          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding>
+            <marker date="1507898582000" expanded="true" signature="31:273" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sixgod/templatetags/sg_list.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="35" column="78" lean-forward="false" selection-start-line="35" selection-start-column="78" selection-end-line="35" selection-end-column="78" />
+        <state relative-caret-position="349">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
             <element signature="e#147#172#0" expanded="false" />
-            <element signature="e#906#933#0" expanded="false" />
+            <element signature="e#925#952#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sixgod/templates/sg/changelist_view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app01/sg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#261#1630#0" expanded="false" />
+            <element signature="e#1714#1911#0" expanded="false" />
+            <element signature="e#1980#2088#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sixgod/templates/sg/add_view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sixgod/templatetags/sg_form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sixgod/service/v1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+        <state relative-caret-position="499">
+          <caret line="123" column="16" lean-forward="false" selection-start-line="123" selection-start-column="6" selection-end-line="123" selection-end-column="16" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
             <element signature="e#238#440#0" expanded="false" />
             <element signature="e#484#935#0" expanded="false" />
             <element signature="e#974#1467#0" expanded="false" />
             <element signature="e#1517#2256#0" expanded="false" />
-            <element signature="e#2299#3067#0" expanded="false" />
+            <element signature="e#3137#3580#0" expanded="false" />
+            <element signature="e#3630#4479#0" expanded="false" />
+            <element signature="e#4728#4801#0" expanded="false" />
+            <element signature="e#4835#5342#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app01/sg.py">
+    <entry file="file://$PROJECT_DIR$/sixgod/templates/sg/md_add_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="46" column="86" lean-forward="true" selection-start-line="46" selection-start-column="86" selection-end-line="46" selection-end-column="86" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-            <element signature="e#1714#1911#0" expanded="false" />
-            <element signature="e#1980#2088#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -65,3 +65,5 @@ class SixGodRole(v1.BaseSixGodAdmin):
 
 
 v1.site.register(models.Role, SixGodRole)
+
+v1.site.register(models.UserGroup)

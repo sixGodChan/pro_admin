@@ -22,7 +22,8 @@ def table_body(result_list, list_display, sga_obj):
         if list_display == '__all__':
             yield [str(row)]
         else:
-            yield [name(sga_obj, obj=row) if isinstance(name, FunctionType) else getattr(row, name) for name in list_display]
+            yield [name(sga_obj, obj=row) if isinstance(name, FunctionType) else getattr(row, name) for name in
+                   list_display]
 
 
 def table_head(list_display, sga_obj):
@@ -37,7 +38,9 @@ def table_head(list_display, sga_obj):
 
         for name in list_display:
             # sga_obj.model_class._meta.get_field(name) 获取model类对象的属性
-            yield name(sga_obj, is_header=True) if isinstance(name, FunctionType) else sga_obj.model_class._meta.get_field(name).verbose_name
+            yield name(sga_obj, is_header=True) if isinstance(name,
+                                                              FunctionType) else sga_obj.model_class._meta.get_field(
+                name).verbose_name
 
 
 @register.inclusion_tag('sg/md.html')

@@ -70,22 +70,23 @@ class BaseSixGodAdmin(object):
         if request.method == 'GET':
             form = self.get_ModelForm()()
             context = {
-                'form': form
+                'form': form,
+                'sga_obj': self,
             }
             return render(request, 'sg/add_view.html', context)
         else:
             form = self.get_ModelForm()(data=request.POST, files=request.FILES)
-            if form.is_valid:
+            if form.is_valid():
                 form.save()
                 base_add_url = reverse(
                     '{0}:{1}_{2}_changelist'.format(self.site.namespace, self.app_label, self.model_name))
                 add_url = '{0}?{1}'.format(base_add_url, request.GET.get('_changelist_filter'))
 
                 return redirect(add_url)
-            context = {
-                'form': form
-            }
-            return render(request, 'sg/add_view.html', context)
+        context = {
+            'form': form
+        }
+        return render(request, 'sg/add_view.html', context)
 
     def delete_view(self, request, pk):
         if request.method == 'GET':
@@ -108,17 +109,17 @@ class BaseSixGodAdmin(object):
             return render(request, 'sg/change_view.html', context)
         else:
             form = self.get_ModelForm()(instance=obj, data=request.POST, files=request.FILES)
-            if form.is_valid:
+            if form.is_valid():
                 form.save()
                 base_add_url = reverse(
                     '{0}:{1}_{2}_changelist'.format(self.site.namespace, self.app_label, self.model_name))
                 edit_url = '{0}?{1}'.format(base_add_url, request.GET.get('_changelist_filter'))
 
                 return redirect(edit_url)
-            context = {
-                'form': form
-            }
-            return render(request, 'sg/change_view.html', context)
+        context = {
+            'form': form
+        }
+        return render(request, 'sg/change_view.html', context)
 
 class SixGodSite(object):
     def __init__(self):
@@ -159,3 +160,4 @@ class SixGodSite(object):
 
 
 site = SixGodSite()
+

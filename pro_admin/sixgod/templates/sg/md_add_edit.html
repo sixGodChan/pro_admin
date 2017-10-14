@@ -1,0 +1,7 @@
+{% for val in ae_obj %}
+    {% if val.is_popup %}
+        <p>{{ val.item.field.label }}:{{ val.item }}&nbsp<a href="{{ val.popup_url }}">添加</a>{{ val.item.errors.0 }}</p>
+    {% else %}
+        <p>{{ val.item.field.label }}:{{ val.item }}{{ val.item.errors.0 }}</p>
+    {% endif %}
+{% endfor %}
