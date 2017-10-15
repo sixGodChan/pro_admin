@@ -1,7 +1,27 @@
-{% for val in ae_obj %}
-    {% if val.is_popup %}
-        <p>{{ val.item.field.label }}:{{ val.item }}&nbsp<a href="{{ val.popup_url }}">添加</a>{{ val.item.errors.0 }}</p>
-    {% else %}
-        <p>{{ val.item.field.label }}:{{ val.item }}{{ val.item.errors.0 }}</p>
-    {% endif %}
-{% endfor %}
+
+
+<form method="post" novalidate>
+    {% csrf_token %}
+    {% for val in ae_obj %}
+        {% if val.is_popup %}
+            <p>{{ val.item.field.label }}:{{ val.item }}&nbsp<a href="#" onclick="popupUrl('{{ val.popup_url }}')">添加</a>{{ val.item.errors.0 }}</p>
+        {% else %}
+            <p>{{ val.item.field.label }}:{{ val.item }}{{ val.item.errors.0 }}</p>
+        {% endif %}
+    {% endfor %}
+    <input type="submit" value="提交">
+</form>
+
+<script>
+    function popupUrl(url) {
+        window.open(url, "win1", "status=1,height:500,width:600,toolbar=0,resizeable=0")
+    }
+    function popupCallback(popup_tag_id, opt_id, opt_text) {
+        console.log(popup_tag_id);
+        var o = document.createElement('option');
+        o.innerHTML = opt_text;
+        o.setAttribute('value', opt_id);
+        o.setAttribute('selected', 'selected');
+        document.getElementById(popup_tag_id).appendChild(o);
+    }
+</script>

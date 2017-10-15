@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from sixgod.service import v1
+
 urlpatterns = [
     url(r'^sixgod/', v1.site.urls),
-
 ]

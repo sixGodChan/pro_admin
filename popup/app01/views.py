@@ -2,8 +2,6 @@ from django.shortcuts import render, HttpResponse
 from app01 import models
 
 
-# Create your views here.
-
 def popup_test(request):
     obj = models.UserGroup.objects.all()
     return render(request, 'popup_test.html', {'obj': obj})

@@ -77,12 +77,19 @@ class BaseSixGodAdmin(object):
         else:
             form = self.get_ModelForm()(data=request.POST, files=request.FILES)
             if form.is_valid():
-                form.save()
+                obj = form.save()
+                # 如果是popup方式过来
+                if request.GET.get('popup_id'):
+                    popup_tag_id = request.GET.get('popup_id')
+                    context = {'popup_tag_id': popup_tag_id, 'option_id': obj.pk, 'option_text': str(obj)}
+                    return render(request, 'sg/popup_response.html', context)
+                # popup方式结束
                 base_add_url = reverse(
                     '{0}:{1}_{2}_changelist'.format(self.site.namespace, self.app_label, self.model_name))
                 add_url = '{0}?{1}'.format(base_add_url, request.GET.get('_changelist_filter'))
 
                 return redirect(add_url)
+
         context = {
             'form': form
         }

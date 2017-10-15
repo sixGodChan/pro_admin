@@ -8,11 +8,8 @@
 <body>
     <h1>添加数据</h1>
 
-    <form method="post" novalidate>
-        {% csrf_token %}
-        {#{{ form.as_p }}#}
-        {% func form %}
-        <input type="submit" value="提交">
-    </form>
+    {#{{ form.as_p }}#}
+    {% func form %}
+
 </body>
 </html>

@@ -16,7 +16,7 @@ def add_edit_page(form):
             url_name = '{0}:{1}_{2}_add'.format(v1.site.namespace, app_label, model_name)
             url = reverse(url_name)
             row['is_popup'] = True
-            row['popup_url'] = url
+            row['popup_url'] = '{0}?popup_id={1}'.format(url, item.auto_id)
         row['item'] = item
         yield row
 
