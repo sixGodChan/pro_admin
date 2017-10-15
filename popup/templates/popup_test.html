@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    <input type="text" name="title">
+    <select id="tag_id">
+        {% for i in obj %}
+            <option value="{{ i.pk }}">{{ i.title }}</option>
+        {% endfor %}
+    </select>
+    <a href="#" onclick="popupUrl('/popup_add/?popup_id=tag_id')">添加</a>
+</form>
+<script>
+    function popupUrl(url) {
+        window.open(url, "xxx", "status=1,height:500,width:600,toolbar=0,resizeable=0")
+    }
+    function popupCallback(popup_tag_id, opt_id, opt_text) {
+        console.log(popup_tag_id);
+        var o = document.createElement('option');
+        o.innerHTML = opt_text;
+        o.setAttribute('value', opt_id);
+        o.setAttribute('selected', 'selected');
+        document.getElementById(popup_tag_id).appendChild(o);
+    }
+</script>
+</body>
+</html>
