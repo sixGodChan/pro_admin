@@ -1,3 +1,4 @@
+import copy
 from django.shortcuts import HttpResponse, render, redirect
 from django.urls import reverse
 
@@ -62,7 +63,9 @@ class BaseSixGodAdmin(object):
         from utils.pager import PageInfo
         total_row = self.model_class.objects.filter(**condition).count()
         base_page_url = reverse('{0}:{1}_{2}_changelist'.format(self.site.namespace, self.app_label, self.model_name))
-        page_info = PageInfo(request.GET.get("page"), total_row, 10, base_page_url, 11)
+        page_param_dict = copy.deepcopy(request.GET)
+        page_param_dict._mutable = True
+        page_info = PageInfo(request.GET.get("page"), total_row, page_param_dict, 10, base_page_url, 11)
         result_list = self.model_class.objects.filter(**condition)[page_info.start:page_info.end]
 
         context = {

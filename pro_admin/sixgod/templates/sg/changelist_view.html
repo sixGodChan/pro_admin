@@ -1,9 +1,11 @@
 {% load sg_list %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="{% static 'sixgod/plugins/bootstrap-3.3.7-dist/css/bootstrap.css' %}">
 </head>
 <body>
     <h1>数据列表</h1>
@@ -15,6 +17,8 @@
     {% func result_list list_display sga_obj %}
 
     <!-- 分页 -->
-    {{ page_info.pager|safe }}
+    <ul class="pagination">
+        {{ page_info.pager|safe }}
+    </ul>
 </body>
 </html>
