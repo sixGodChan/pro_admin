@@ -1,7 +1,14 @@
 ```
+
+# view.py
 total_row = models.Student.objects.all().count()  # 全部数据行数
 page_info = PageInfo(request.GET.get("page"), total_row, 10, reverse("students"), 11)
 students_list = models.Student.objects.all()[page_info.start():page_info.end()]
+
+# html
+
+{{ page_info.pager|safe }}
+
 ```
 
 class PageInfo(object):
