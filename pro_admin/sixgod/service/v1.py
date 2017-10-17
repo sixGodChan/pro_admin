@@ -154,8 +154,9 @@ class SixGodSite(object):
     def get_urls(self):
         from django.conf.urls import url, include
         ret = [
-            url(r'^login/', self.login, name='login'),
-            url(r'^logout/', self.logout, name='logout'),
+            url(r'^$', self.index, name='index'),
+            url(r'^login/$', self.login, name='login'),
+            url(r'^logout/$', self.logout, name='logout'),
         ]
 
         for model_cls, admin_cls_obj in self._registry.items():
@@ -173,10 +174,37 @@ class SixGodSite(object):
         return self.get_urls(), self.app_name, self.namespace
 
     def login(self, request):
-        return HttpResponse('login')
+        """
+        用户登录
+        :param request: 
+        :return: 
+        """
+        if request.method == 'GET':
+            return render(request, 'login.html')
+        else:
+            from sixgod import models
+            from sixgod.service import rbac
+
+            user = request.POST.get('username')
+            pwd = request.POST.get('password')
+            obj = models.User.objects.filter(username=user, password=pwd).first()
+            if obj:
+                # 获取当前用户权限： url
+                rbac.initial_permission(request, obj)
+                return redirect('/sixgod/')
+            else:
+                return render(request, 'login.html')
 
     def logout(self, request):
         return HttpResponse('logout')
+
+    def index(self, request):
+        """
+        首页
+        :param request: 
+        :return: 
+        """
+        return render(request, 'index.html')
 
 
 site = SixGodSite()
