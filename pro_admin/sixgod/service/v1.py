@@ -55,13 +55,22 @@ class BaseSixGodAdmin(object):
 
         # 列表页：表格
         self.request = request
-        result_list = self.model_class.objects.all()
+        # result_list = self.model_class.objects.all()
+
+        # 列表页：分页
+        condition = {}
+        from utils.pager import PageInfo
+        total_row = self.model_class.objects.filter(**condition).count()
+        base_page_url = reverse('{0}:{1}_{2}_changelist'.format(self.site.namespace, self.app_label, self.model_name))
+        page_info = PageInfo(request.GET.get("page"), total_row, 10, base_page_url, 11)
+        result_list = self.model_class.objects.filter(**condition)[page_info.start:page_info.end]
 
         context = {
             'result_list': result_list,
             'list_display': self.list_display,
             'sga_obj': self,
             'add_url': add_url,
+            'page_info': page_info,
         }
 
         return render(self.request, 'sg/changelist_view.html', context)
@@ -82,7 +91,7 @@ class BaseSixGodAdmin(object):
                 if request.GET.get('popup_id'):
                     popup_tag_id = request.GET.get('popup_id')
                     context = {'popup_tag_id': popup_tag_id, 'option_id': obj.pk, 'option_text': str(obj)}
-                    return render(request, 'sg/popup_response.html', context)
+                    return render(request, 'sg/popup_response.html', {'data_dict': context})
                 # popup方式结束
                 base_add_url = reverse(
                     '{0}:{1}_{2}_changelist'.format(self.site.namespace, self.app_label, self.model_name))
@@ -128,6 +137,7 @@ class BaseSixGodAdmin(object):
         }
         return render(request, 'sg/change_view.html', context)
 
+
 class SixGodSite(object):
     def __init__(self):
         self._registry = {}
@@ -167,4 +177,3 @@ class SixGodSite(object):
 
 
 site = SixGodSite()
-
